@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastController, AlertController } from '@ionic/angular';
 
 
@@ -19,7 +20,23 @@ export class SponsorsPage {
   total = 0;
 
 
-  constructor(private toastController: ToastController, private alertController: AlertController) {}
+  constructor(private toastController: ToastController, private alertController: AlertController, private router: Router) {}
+
+  Pagar() {
+    this.presentAlert('Gracias por comprar').then(() => {
+      this.router.navigate(['/home']);
+    });
+  }
+  
+
+  async presentAlert(titulo: string) {
+    const alert = await this.alertController.create({
+      header: titulo,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
 
 
   async agregarAlCarrito(producto: { nombre: string; descripcion: string; precio: number }) {
