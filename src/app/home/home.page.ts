@@ -23,8 +23,14 @@ export class HomePage implements OnInit {
     this.router.navigate(['/cal-imc'])
   }
 
+  irSponsors() {
+    this.router.navigate(['/sponsors'])
+  }
+
   ngOnInit() {
   }
+
+
   
 
 }

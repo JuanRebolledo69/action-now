@@ -44,6 +44,10 @@ const routes: Routes = [
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
+  {
+    path: 'sponsors',
+    loadChildren: () => import('./pages/sponsors/sponsors.module').then( m => m.SponsorsPageModule)
+  },
 
 
 ];

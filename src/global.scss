@@ -36,11 +36,28 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 
-ion-content {
-    --background: url('/assets/img/fondo.jpg') no-repeat center center;
-    --background-size: cover;
-  }
+
+
 
 :root {
     --ion-text-color: #ffffff;
+}
+
+
+
+body {
+  --ion-background-color: linear-gradient(to  bottom, #000000, #000000);
+}
+
+.icono {
+  color:#ffffff;
+}
+
+ion-content {
+  --background: url('/assets/img/fondo.jpg') no-repeat center center;
+  --background-size: cover;
+}
+
+.alert-radio-label.sc-ion-alert-md {
+  color:#ffffff;
 }
